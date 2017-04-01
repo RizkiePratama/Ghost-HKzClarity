@@ -1,0 +1,88 @@
+{{!< default}}
+{{!-- Index  --}}
+
+        {{!-- POST START --}}
+        {{#post}}
+        <header class="hero" {{#if image}}style="background-image: url({{image}})"{{/if}}>
+            <div class="hero-body hero-overlay has-text-centered">
+                <h2 class="title">{{title}}</h2>
+                <span class="subtitle">Posted by {{author}} on <time datetime='{{date format="YYYY-MM-DD"}}'>{{date format="DD MMMM YYYY"}}</time></span>
+                <div class="meta-container">
+                    {{tags separator=""}}
+                </div>
+            </div>
+        </header> <!-- .hero header -->
+
+        <main class="content content-single">
+            <article class="{{post_class}} container">
+                <div class="column content-block center-block">
+                    <!-- POST CONTENT START -->
+                    {{content}}
+                    <!-- POST CONTENT END -->
+
+                    <div class="author-block">
+                    {{#author}}
+                        <figure class="author-avatar">
+                            <a href="{{url}}" style="background-image: url({{image}})"></a>
+                        </figure> <!-- .author-avatar -->
+
+                        <div class="author-info">
+                            <h3 class="author-name"><a href="{{url}}">{{name}}</a></h3>
+                            <p class="author-bio">{{bio}}</p>
+                            <div>
+                                <span><i class="fa fa-map-marker fa-1x"></i>{{location}}</span>
+                                <span><a href="{{website}}"><i class="fa fa-link fa-1x"></i>{{website}}</a></span>
+                                <span><a href="{{facebook_url}}"><i class="fa fa-facebook-square fa-1x"></i>Facebook</a></span>
+                                <span><a href="{{twitter_url}}"><i class="fa fa-twitter fa-1x"></i>Twitter</a></span>
+                            </div>
+                        </div> <!-- .author-info -->
+                    {{/author}}
+                    </div> <!-- .author-block -->
+
+                    <div class="post-navigation">
+                            {{#next_post}}
+                                <a href="{{url}}" class="has-text-centered" style="background-image: url({{image}});">
+                                    <div class="overlay">
+                                    <h1>{{title}}</h1>
+                                    </div>
+                                </a>
+                            {{/next_post}}
+
+                            {{#prev_post}}
+                                <a href="{{url}}" class="has-text-centered" style="background-image: url({{image}});">
+                                    <div class="overlay">
+                                    <h1>{{title}}</h1>
+                                    </div>
+                                </a>
+                            {{/prev_post}}
+                    </div> <!-- .post-navigation -->
+
+                    <div class="response-block">
+                        <div id="disqus_thread">
+                            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                        </div> <!-- #disqus-thread -->
+                    </div> <!-- .response-block -->
+                </div> <!-- .content-block.center-block -->
+
+                <!-- DISQUS SCRIPT START -->
+                <script>
+                var disqus_config = function () {
+                this.page.url = '{{url absolute="true"}}';
+                this.page.identifier = 'blogpost-{{id}}';
+                };
+
+                (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'your.disqus.emebed,url';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+                </script>
+                <!-- DISQUS SCRIPT END -->
+                                
+            </article>
+        </main>
+
+        {{!-- POST END --}}
+        {{/post}}
+

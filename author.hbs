@@ -1,0 +1,32 @@
+{{!< default}}
+{{!-- Index  --}}
+
+            <div class="hero">
+            </div>
+
+            <main class="content content-roll">
+                {{#author}}
+                <header class="hero" {{#if image}}style="background-image: url({{cover}})"{{/if}}>
+                    <div class="hero-body hero-author hero-overlay has-text-centered">
+                        <figure class="author-avatar">
+                            <a href="{{url}}" style="background-image: url({{image}})"></a>
+                        </figure>
+
+                        <h2 class="title author-name">{{name}}</h2>
+                        <p class="subtitle author-bio">{{bio}}</p>
+
+                        <div class="author-info subtitle">
+                            {{#if location}}<span><i class="fa fa-map-marker fa-1x"></i>{{location}}</span>{{/if}}
+                            {{#if website}}<span><a href="{{website}}"><i class="fa fa-link fa-1x"></i>{{website}}</a></span>{{/if}}
+                            {{#if facebook}}<span><a href="{{facebook_url}}"><i class="fa fa-facebook-square fa-1x"></i>Facebook</a></span>{{/if}}
+                            {{#if twitter}}<span><a href="{{twitter_url}}"><i class="fa fa-twitter fa-1x"></i>Twitter</a></span>{{/if}}
+                            <span><i class="fa fa-pencil fa-1x"></i>{{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
+                        </div>
+                    </div>
+                </header>
+                {{/author}}
+
+                <div class="column content-block center-block">
+                {{> post_loop}}
+                </div>
+            </main>
