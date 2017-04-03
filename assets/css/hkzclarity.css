@@ -338,4 +338,11 @@ footer {
 pre[class*="language-"] {
   background: #FAFAFA !important; }
 
+.token.number {
+  font-size: 1em;
+  margin-right: 0px;
+  background-color: transparent;
+  min-width: 0;
+  padding: 0; }
+
 /*# sourceMappingURL=hkzclarity.css.map */
