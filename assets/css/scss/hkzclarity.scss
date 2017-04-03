@@ -1,3 +1,6 @@
+// Global Overide
+// ==========================
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold!important;
 }
@@ -15,9 +18,16 @@ body {
   margin-top: 52px;
 }
 
+// Bulma Overide
+// ==========================
+
 .container {
   position: relative;
 }
+
+
+// Global
+// ==========================
 
 .content-block {
   max-width: 900px;
@@ -42,43 +52,6 @@ body {
 #header-navigation {
   background: #FFFFFF;
 }
-
-@media( max-width: 900px ) {
-    .nav-right {
-      flex-grow: 0;
-    }
-
-    #header-nav-collapse {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      z-index: -20;
-      width: 100%;
-      transition: ease 2s;
-      transform: translatey(-100%);
-      background: #FAFAFA;
-      border-bottom: 10px solid #00D1B2;
-    }
-
-    #toggle-head-nav:checked ~ #header-nav-collapse {
-	display: block;
-	opacity: 100;
-      transform: translatey(100%);
-      transition: ease 1s;
-    }
-
-    #header-nav-collapse ul.nav {
-      display: block;
-      background: transparent;
-
-      a:hover {
-        background: #00D1B2;
-        border-background: transparent;
-        color: #FFFFFF;
-      }
-    }
-}
-
 
 #content-area {
   padding-top: 50px;
@@ -159,13 +132,34 @@ body {
 .post {
   padding: 50px 20px;
 
-  h2 {
+  pre {
+    margin-bottom: 1em;
+    padding: 1em;
+  }
+
+  img {
+    padding: 2rem;
+  }
+
+  img ~ small,
+  img ~ span {
+    font-size: 0.9rem;
+    margin: -2rem 2rem 0rem 2rem;
+    padding: 3px 8px ;
+    border-left: 7px solid #454545;
+    font-style: italic;
+    display: block;
+    color: #646464;
+  }
+
+  .post-title {
     margin: 2px 0px;
     font-weight: bold;
 
     a {
-      border-left: 6px solid #00D1B2;
+      display: block;
       padding-left: 10px;
+      border-left: 6px solid #00D1B2;
     }
 
     a:hover {
@@ -270,7 +264,6 @@ body {
 
 .post-navigation {
   display: flex;
-  //flex-flow: wrap;
 
   a {
     background: center center / cover no-repeat;
@@ -302,8 +295,7 @@ body {
   margin: 30px auto;
 }
 
-
-  #engine-note {
+#engine-note {
   text-align: right;
 }
 
@@ -321,10 +313,48 @@ footer {
   }
 }
 
+// On Media Resize
+// ==========================
+
 @media( max-width: 900px ) {
+  .nav-right {
+    flex-grow: 0;
+  }
+
+  #header-nav-collapse {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -20;
+    width: 100%;
+    transition: ease 2s;
+    transform: translatey(-100%);
+    background: #FAFAFA;
+    border-bottom: 10px solid #00D1B2;
+  }
+
+  #toggle-head-nav:checked ~ #header-nav-collapse {
+    display: block;
+    opacity: 100;
+    transform: translatey(100%);
+    transition: ease 1s;
+  }
+
+  #header-nav-collapse ul.nav {
+    display: block;
+    background: transparent;
+
+    a:hover {
+      background: #00D1B2;
+      border-background: transparent;
+      color: #FFFFFF;
+    }
+  }
+
   .author-block {
      padding: 50px 20px 20px;
   }
+
   .post-navigation,
   .author-block {
      margin-left: -2rem;
@@ -349,6 +379,10 @@ footer {
     padding: 0px 15px;
   }
 }
+
+
+// Eror Pages Styles
+// ==========================
 
 #error-screen {
   position: absolute;
@@ -405,4 +439,11 @@ footer {
   li {
     width: 100%;
   }
+}
+
+// Overide Prism Style
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #FAFAFA!important;
 }

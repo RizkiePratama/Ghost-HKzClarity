@@ -1,0 +1,6 @@
+# SASS CACHE DIRECTORY
+assets/css/scss/.sass-cache
+
+# Vim swp files
+*.swp
+*.swo
