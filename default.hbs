@@ -5,15 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         {{!-- Page Title --}}
-        {{#if post}}<title>{{meta_title}} - {{@blog.title}}</title>
-        {{else if author}}<title>More article by this Author - {{#author}}{{name}}{{/author}}</title>
-        {{else}}<title>{{@blog.title}} - {{@blog.description}}</title>{{/if}}
-
-        {{!-- Page Description --}}
-        {{#if post}}<meta name="description" content="{{#post}}{{excerpt words=30}}{{/post}}">
-	{{else if author}}<meta name="description" content="{{#author}}{{bio}}{{/author}}">
-	{{else}}<meta name="description" content="{{meta_description}}">
-        {{/if}}
+	<title>{{meta_title}}</title>
 
         <!-- Ghost Head START -->
         {{ghost_head}}
@@ -31,11 +23,11 @@
         <div id="header-navigation">
             <div class="nav container">
                 <div class="nav-left">
-                    <a class="nav-item" href="{{@blog.url}}">
-			{{#if @blog.logo}}
-                        <img id="header-logo" src="{{@blog.logo}}" alt="logo">
+                    <a class="nav-item" href="{{@site.url}}">
+			{{#if @site.logo}}
+                        <img id="header-logo" src="{{@site.logo}}" alt="logo">
 			{{else}}
-                        <h2 id="header-logo">{{@blog.title}}</h2>
+                        <h2 id="header-logo">{{@site.title}}</h2>
 			{{/if}}
                     </a>
                 </div> <!-- .nav-left -->
@@ -77,9 +69,9 @@
 
         <footer>
             <div class="content-block center-block">
-                <h2 class="is-hidden-mobile">{{@blog.description}}</h2>
+                <h2 class="is-hidden-mobile">{{@site.description}}</h2>
                 <div id="footnote" class="columns is-gapless">
-                    <span id="copyright-note" class="column">Copyright &copy; 2017, <a href="/">{{@blog.title}}</a></span>
+                    <span id="copyright-note" class="column">Copyright &copy; 2017, <a href="/">{{@site.title}}</a></span>
                     <span id="engine-note" class="column">Proudly Published with <a href="https://ghost.org/">Ghost</a></span>
                 </div> <!-- #footnote.column -->
             </div><!-- .content-block.center-block -->

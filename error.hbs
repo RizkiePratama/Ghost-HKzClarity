@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Opps! We're having {{code}} —  {{message}}</title>
+	<title>Opps! We're having {{statusCode}} —  {{message}}</title>
 
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
@@ -21,20 +21,20 @@
         {{ghost_head}}
     </head>
 
-    <body id="error-{{code}}">
+    <body id="error-{{statusCode}}">
         <div id="error-screen" class="content has-text-centered">
-             <h1 id="error-code">{{code}}</h1>
+             <h1 id="error-code">{{statusCode}}</h1>
 	     <h3 id="error-message">{{message}}</h3>
-	     <a href="{{@blog.url}}">Back To Civilization →</a>
+	     <a href="{{@site.url}}">Back To Civilization →</a>
         </div>
 
         {{#if stack}}
         <div id="error-details" class="content">
 		<input type="checkbox" id="toggle-stack-trace"><label for="toggle-stack-trace">Stack Trace</label></a>
             <ul id="error-stack">
-                {{#each stack}}
+                {{#foreach stack}}
                 <li><p>at {{#if function}}<em>{{function}}</em>{{/if}} {{at}}</p></li>
-                {{/each}}
+                {{/foreach}}
             </ul>
         </div>
         {{/if}}

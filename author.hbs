@@ -6,10 +6,10 @@
 
             <main class="content content-roll">
                 {{#author}}
-                <header class="hero" {{#if image}}style="background-image: url({{cover}})"{{/if}}>
+                <header class="hero" {{#if profile_image}}style="background-image: url({{cover_image}})"{{/if}}>
                     <div class="hero-body hero-author hero-overlay has-text-centered">
                         <figure class="author-avatar">
-                            <a href="{{url}}" style="background-image: url({{image}})"></a>
+                            <a href="{{url}}" style="background-image: url({{img_url profile_image}})"></a>
                         </figure>
 
                         <h2 class="title author-name">{{name}}</h2>

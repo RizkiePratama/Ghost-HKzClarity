@@ -240,7 +240,6 @@ footer {
 @media (max-width: 900px) {
   .nav-right {
     flex-grow: 0; }
-
   #header-nav-collapse {
     position: absolute;
     right: 0;
@@ -251,13 +250,11 @@ footer {
     transform: translatey(-100%);
     background: #FAFAFA;
     border-bottom: 10px solid #00D1B2; }
-
   #toggle-head-nav:checked ~ #header-nav-collapse {
     display: block;
     opacity: 100;
     transform: translatey(100%);
     transition: ease 1s; }
-
   #header-nav-collapse ul.nav {
     display: block;
     background: transparent; }
@@ -265,28 +262,24 @@ footer {
       background: #00D1B2;
       border-background: transparent;
       color: #FFFFFF; }
-
   .author-block {
     padding: 50px 20px 20px; }
-
   .post-navigation,
   .author-block {
     margin-left: -2rem;
     margin-right: -2rem; }
-
   .author-avatar {
     right: 50%;
     transition: ease 1s; }
-
   .post-navigation {
     flex-flow: wrap; }
     .post-navigation a {
       min-width: 100%; }
-
   #copyright-note,
   #engine-note {
     text-align: center;
     padding: 0px 15px; } }
+
 #error-screen {
   position: absolute;
   width: 100%;
@@ -345,4 +338,19 @@ pre[class*="language-"] {
   min-width: 0;
   padding: 0; }
 
-/*# sourceMappingURL=hkzclarity.css.map */
+.kg-width-full,
+.kg-width-wide,
+.kg-gallery-container,
+.kg-gallery-row,
+.kg-gallery-image,
+.kg-bookmark-card,
+.kg-bookmark-container,
+.kg-bookmark-content,
+.kg-bookmark-title,
+.kg-bookmark-description,
+.kg-bookmark-metadata,
+.kg-bookmark-icon,
+.kg-bookmark-author,
+.kg-bookmark-publisher,
+.kg-bookmark-thumbnail {
+  content: ""; }

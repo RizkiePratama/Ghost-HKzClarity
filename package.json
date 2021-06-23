@@ -1,25 +1,31 @@
 {
-    "name"         : "HKzClarity",
-    "description"  : "A Simple Ghost theme",
-    "version"      : "0.0.1.2-Alpha",
-    "engine"       : { "ghost" : ">=0.9.0 <1.0.0" },
-    "license"      : "MIT",
-    "screenshots"  : {
-	                 "desktop" : "assets/screenshots_desktop.png",
-			 "mobile"  : "assets/screenshots_mobile.png"
-                     },
-    "author"       : {
-	                 "name"  : "Rizkie Yudha Pratama",
-	                 "email" : "personal@rizkiepratama.net",
-	                 "url"   : "https:/rizkiepratama.net/"
-	             },
-    "gpm"          : {
-	                 "type"       : "theme",
-			 "categories" : ["Personal Blog"]
-	             },
-    "keywords"     : ["Ghost","Theme"],
-    "repository"   : {
-	                 "type" : "git",
-			 "url"  : "https://github.com/VikTymZ/HKzClarity"
-	             }
+  "name": "hkz-clarity",
+  "description": "A Simple Ghost theme",
+  "version": "0.1.3",
+  "engines": {
+    "ghost": ">=4.0.0",
+    "ghost-api": "v4"
+  },
+  "license": "MIT",
+  "screenshots": {
+    "desktop": "assets/screenshots_desktop.png",
+    "mobile": "assets/screenshots_mobile.png"
+  },
+  "author": {
+    "name": "Rizkie Yudha Pratama",
+    "email": "personal@rizkiepratama.net",
+    "url": "https:/rizkiepratama.net/"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": ["Personal Blog"]
+  },
+  "keywords": ["ghost-theme"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VikTymZ/HKzClarity"
+  },
+  "dependencies": {
+    "node-sass": "^6.0.0"
+  }
 }
