@@ -247,13 +247,15 @@ body {
 .author-info {
   padding: 15px 20px;
 
+  .fa {
+    margin: 4px 4px 4px 0px;
+  }
+}
+
+.author-meta {
   span {
     display: inline-block;
     margin: 1px 10px 1px 0px;
-  }
-
-  .fa {
-    margin: 4px 4px 4px 0px;
   }
 }
 

@@ -6,7 +6,7 @@
         <header class="hero" {{#if feature_image}}style="background-image: url({{img_url feature_image}})"{{/if}}>
             <div class="hero-body hero-overlay has-text-centered">
                 <h2 class="title">{{title}}</h2>
-                <span class="subtitle">Posted by {{primary_author}} on <time datetime='{{date format="YYYY-MM-DD"}}'>{{date format="DD MMMM YYYY"}}</time></span>
+                <span class="subtitle">Posted by {{authors}} on <time datetime='{{date format="YYYY-MM-DD"}}'>{{date format="DD MMMM YYYY"}}</time></span>
                 <div class="meta-container">
                     {{tags separator=""}}
                 </div>
@@ -27,9 +27,13 @@
                         </figure> <!-- .author-avatar -->
 
                         <div class="author-info">
-                            <h3 class="author-name"><a href="{{url}}">{{name}}</a></h3>
-                            <p class="author-bio">{{bio}}</p>
-                            <div>
+                            <div class="author-name">
+                              <h3><a href="{{url}}">{{name}}</a></h3>
+                            </div>
+                            <div class="author-bio">
+                              <p>{{bio}}</p>
+                            </div>
+                            <div class="author-meta">
                                 <span><i class="fa fa-map-marker fa-1x"></i>{{location}}</span>
                                 <span><a href="{{website}}"><i class="fa fa-link fa-1x"></i>{{website}}</a></span>
                                 <span><a href="{{facebook_url}}"><i class="fa fa-facebook-square fa-1x"></i>Facebook</a></span>
